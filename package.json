@@ -1,0 +1,22 @@
+{
+  "name": "simon-the-turtle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvillaraza/simon-the-turtle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvillaraza/simon-the-turtle/issues"
+  },
+  "homepage": "https://github.com/alvillaraza/simon-the-turtle#readme",
+  "dependencies": {
+    "create-react-app": "^5.0.1"
+  }
+}
