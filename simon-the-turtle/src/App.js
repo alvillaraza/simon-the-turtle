@@ -1,4 +1,4 @@
-import instagram from "./assets/instagram.svg";
+import Hero from './Hero'
 import turtle_logo_white from "./assets/turtle_logo_white.svg"
 import "./App.css";
 
@@ -6,7 +6,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={instagram} alt="instagram logo" />
+        <Hero />
+       
         <img src={turtle_logo_white} alt="white simon the turtle logo" />
         <p>
           After building HeadSpace in 2016, I decided to build a smaller, more
