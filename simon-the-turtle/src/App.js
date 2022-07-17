@@ -1,4 +1,5 @@
 import Hero from './Hero'
+import Gallery from './Gallery'
 import turtle_logo_white from "./assets/turtle_logo_white.svg"
 import "./App.css";
 
@@ -25,6 +26,7 @@ function App() {
           vehicle.
         </p>
       </header>
+      <Gallery />
     </div>
   );
 }
