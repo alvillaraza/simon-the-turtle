@@ -22,8 +22,18 @@
   width: 100%;
   grid-row: 1/-1;
 }
-.App .hero-image .hero-image-front {
+.App .hero-image .hero-copy {
   z-index: 1;
+  width: unset;
+  margin-left: auto;
+  margin-right: auto;
+  left: 65px;
+  right: 0;
+  top: 0.9%;
+  position: absolute;
+}
+.App .hero-image .hero-image-front {
+  z-index: 2;
 }
 .App .logo-white {
   position: absolute;
@@ -39,14 +49,18 @@
   text-align: left;
   line-height: 172%;
   letter-spacing: 0.04em;
+  border-radius: 60%;
 }
 .App .assembly-daytime {
   border: 20px solid #ffffff;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   margin-top: -20%;
+}
+.App .assembly {
+  width: 100%;
 }
