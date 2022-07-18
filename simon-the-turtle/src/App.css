@@ -4,6 +4,7 @@
   font-size: 16px;
   color: white;
   background-color: #00022a;
+  position: relative;
 }
 .App .header {
   background-color: #000019;
@@ -21,14 +22,31 @@
   width: 100%;
   grid-row: 1/-1;
 }
-.App .hero-image .hero-image {
+.App .hero-image .hero-image-front {
   z-index: 1;
 }
 .App .logo-white {
-  margin: -10%;
+  position: absolute;
   z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: -13%;
 }
 .App .copy {
-  margin: 148px 248px;
+  margin: 148px 248px 284px 248px;
   text-align: left;
+  line-height: 172%;
+  letter-spacing: 0.04em;
+}
+.App .assembly-daytime {
+  border: 20px solid #ffffff;
+  position: absolute;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: -20%;
 }
