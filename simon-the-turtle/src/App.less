@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  font-family: "Prata", serif;
+  font-size: 16px;
+  color: white;
+  background-color: #00022a;
+
+  .header {
+    background-color: #000019;
+    text-align: right;
+    padding: 10px;
+  }
+
+  .hero-image {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: end;
+
+    img {
+      grid-column: 1/-1;
+    width: 100%;
+    grid-row: 1/-1;
+    }
+
+    .hero-image {
+      z-index: 1;
+    }
+  }
+
+  .logo-white {
+    margin: -10%;
+    z-index: 2;
+
+  }
+  .copy {
+    margin: 148px 248px;
+    text-align: left;
+  }
+}

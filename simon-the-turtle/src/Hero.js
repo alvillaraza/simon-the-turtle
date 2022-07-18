@@ -1,16 +1,15 @@
+import hero_image from './assets/hero_image.png'
 import hero_blur from "./assets/hero_blur.png";
-import hero_image from "./assets/hero_image.png";
-import instagram from './assets/instagram.svg'
+import hero_image_title from "./assets/hero_image_title.jpeg";
 
 const Hero = () => {
   return (
-    <section>
-      <img src={instagram} alt="instagram logo" />
-      <img src={hero_blur} alt="blurry hero image" />
-
-      <img src={hero_image} alt="simon the turtle" />
+    <section className='hero-image'>
+      <img src={hero_image} className='hero-image' alt='hero' />
+      <img src={hero_blur} alt="blurry hero" />
+      {/* <img src={hero_image_title} alt="simon the turtle" /> */}
     </section>
   );
 };
 
-export default Hero
+export default Hero;

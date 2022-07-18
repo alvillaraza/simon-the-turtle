@@ -8,12 +8,12 @@ import nighttime5 from "./assets/images/5nighttime.JPG";
 const Gallery = () => {
   return (
     <section>
-      <img src={nighttime0} alt="nighttime image" />
-      <img src={nighttime1} alt="daytime image" />
-      <img src={daytime2} alt="nighttime image" />
-      <img src={nighttime3} alt="nighttime image" />
-      <img src={nighttime4} alt="nighttime image" />
-      <img src={nighttime5} alt="nighttime image" />
+      <img src={nighttime0} alt="nighttime" />
+      <img src={nighttime1} alt="daytime" />
+      <img src={daytime2} alt="nighttime" />
+      <img src={nighttime3} alt="nighttime" />
+      <img src={nighttime4} alt="nighttime" />
+      <img src={nighttime5} alt="nighttime" />
     </section>
   );
 };
