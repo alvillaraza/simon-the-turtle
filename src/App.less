@@ -1,75 +1,156 @@
-.App {
-    text-align: center;
-    font-family: 'Prata', serif;
-    font-size: 16px;
-    color: white;
-    background-color: #00022a;
-    position: relative;
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
 
-    .header {
-        background-color: #000019;
-        text-align: right;
-        padding: 10px;
+.headingFont {
+    font-family: 'Amarante', cursive;
+}
+
+body {
+    background-color: #00022a;
+    color: white;
+    font-family: 'Prata', serif;
+    font-size: 1.6rem;
+}
+
+h1,
+h2 {
+    .headingFont;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+header {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    nav {
+        align-self: start;
+        grid-column: ~'1 / -1';
+        grid-row: ~'1 / -1';
+        justify-self: end;
+        overflow: hidden;
+        z-index: 2;
+
+        i {
+            font-size: 2.2rem;
+            font-style: normal;
+        }
+
+        a {
+            color: white;
+            display: block;
+            padding: 24px;
+            text-decoration: none;
+            transform: scale(1, 1);
+            transition-duration: 0.24s;
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.47, 0.46, 0, 2.47);
+
+            &:hover {
+                transform: scale(1.2, 1.2);
+            }
+        }
     }
 
-    .hero-image {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+    section.hero-image-bg {
         align-items: end;
+        display: flex;
+        grid-column: ~'1 / -1';
+        grid-row: ~'1 / -1';
+        justify-content: center;
+        overflow: hidden;
 
         img {
-            grid-column: 1/-1;
-            width: 100%;
-            grid-row: 1/-1;
-        }
-
-        .hero-copy {
-            z-index: 1;
-            width: unset;
-            margin-left: auto;
-            margin-right: auto;
-            left: 65px;
-            right: 0;
-            top: 0.9%;
-            position: absolute;
-        }
-
-        .hero-image-front {
-            z-index: 2;
+            min-width: 768px;
         }
     }
 
-    .logo-white {
-        position: absolute;
-        z-index: 2;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        margin-top: -13%;
+    section.hero-image-text {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        grid-column: ~'1 / -1';
+        grid-row: ~'1 / -1';
+        justify-content: center;
+
+        .text-container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1,
+        h2 {
+            line-height: 100%;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 22vw;
+            letter-spacing: -2vw;
+            margin-bottom: -2.5vw;
+        }
+
+        h2 {
+            font-size: 8vw;
+            letter-spacing: -0.25vw;
+
+            span {
+                display: inline-block;
+                width: 10vw;
+            }
+        }
     }
 
-    .copy {
-        margin: 148px 248px 284px 248px;
-        text-align: left;
-        line-height: 172%;
-        letter-spacing: 0.04em;
-        border-radius: 60%;
-    }
+    section.hero-image-fg {
+        align-items: end;
+        display: flex;
+        grid-column: ~'1 / -1';
+        grid-row: ~'1 / -1';
+        justify-content: center;
+        overflow: hidden;
+        z-index: 1;
 
-    .assembly-daytime {
-        border: 20px solid #ffffff;
-        position: absolute;
-        z-index: 3;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        margin-top: -20%;
+        img {
+            min-width: 768px;
+        }
     }
+}
 
-    .assembly {
-        width: 100%;
-    }
+.logo-white {
+    position: absolute;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: -13%;
+}
+
+.copy {
+    margin: 148px 248px 284px 248px;
+    text-align: left;
+    line-height: 172%;
+    letter-spacing: 0.04em;
+    border-radius: 60%;
+}
+
+.assembly-daytime {
+    border: 20px solid #ffffff;
+    position: absolute;
+    z-index: 3;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: -20%;
+}
+
+.assembly {
+    width: 100%;
 }
