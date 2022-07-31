@@ -1,75 +1,75 @@
 .App {
-  text-align: center;
-  font-family: "Prata", serif;
-  font-size: 16px;
-  color: white;
-  background-color: #00022a;
-  position: relative;
+    text-align: center;
+    font-family: 'Prata', serif;
+    font-size: 16px;
+    color: white;
+    background-color: #00022a;
+    position: relative;
 
-  .header {
-    background-color: #000019;
-    text-align: right;
-    padding: 10px;
-  }
-
-  .hero-image {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    align-items: end;
-
-    img {
-      grid-column: 1/-1;
-      width: 100%;
-      grid-row: 1/-1;
+    .header {
+        background-color: #000019;
+        text-align: right;
+        padding: 12px;
     }
 
-    .hero-copy {
-     z-index: 1;
-    width: unset;
-    margin-left: auto;
-    margin-right: auto;
-    left: 65px;
-    right: 0;
-    top: 0.9%;
-    position: absolute;
+    .hero-image {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: end;
+
+        img {
+            grid-column: 1/-1;
+            width: 100%;
+            grid-row: 1/-1;
+        }
+
+        .hero-copy {
+            z-index: 1;
+            width: unset;
+            margin-left: auto;
+            margin-right: auto;
+            left: 65px;
+            right: 0;
+            top: 0.9%;
+            position: absolute;
+        }
+
+        .hero-image-front {
+            z-index: 2;
+        }
     }
 
-    .hero-image-front {
-      z-index: 2;
+    .logo-white {
+        position: absolute;
+        z-index: 2;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        margin-top: -13%;
     }
-  }
 
-  .logo-white {
-    position: absolute;
-    z-index: 2;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    margin-top: -13%;
-  }
+    .copy {
+        margin: 148px 248px 284px 248px;
+        text-align: left;
+        line-height: 172%;
+        letter-spacing: 0.04em;
+        border-radius: 60%;
+    }
 
-  .copy {
-    margin: 148px 248px 284px 248px;
-    text-align: left;
-    line-height: 172%;
-    letter-spacing: 0.04em;
-    border-radius: 60%;
-  }
+    .assembly-daytime {
+        border: 20px solid #ffffff;
+        position: absolute;
+        z-index: 3;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        margin-top: -20%;
+    }
 
-  .assembly-daytime {
-    border: 20px solid #ffffff;
-    position: absolute;
-    z-index: 3;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    margin-top: -20%;
-  }
-
-  .assembly {
-    width: 100%;
-  }
+    .assembly {
+        width: 100%;
+    }
 }
