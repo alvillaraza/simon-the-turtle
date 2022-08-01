@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=DM+Sans&display=swap');
 
 .headingFont {
     font-family: 'Amarante', cursive;
+}
+
+.readingFont {
+    font-family: 'DM Sans', sans-serif;
 }
 
 html {
@@ -23,7 +27,8 @@ h2 {
 }
 
 p {
-    line-height: 2.8rem;
+    line-height: 2.4rem;
+    .readingFont;
 }
 
 img {
@@ -304,10 +309,18 @@ header {
 
     p {
         max-width: 55ch;
+        width: 100%;
+
+        &.author {
+            border-bottom: 1px white solid;
+            margin-block-start: 0;
+            padding-block-end: 24px;
+            text-align: right;
+        }
     }
 
-    small {
-        line-height: 24px;
+    p:last-of-type {
+        line-height: 124%;
     }
 }
 

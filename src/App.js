@@ -84,6 +84,7 @@ function App() {
                     Two years later, we've refined the design so that it can
                     completely disassemble into the bed of a pickup truck.
                 </p>
+                <p className="author">Sam Ogden</p>
                 <p>
                     <small>
                         SIMON the TURTLE is a Sensory Immersive Mobile

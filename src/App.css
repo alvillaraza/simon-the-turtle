@@ -5,8 +5,18 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/amarante/v22/xMQXuF1KTa6EvGx9bq-3.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriOZQ.ttf) format('truetype');
+}
 .headingFont {
   font-family: 'Amarante', cursive;
+}
+.readingFont {
+  font-family: 'DM Sans', sans-serif;
 }
 html {
   font-size: 62.5%;
@@ -24,7 +34,8 @@ h2 {
   font-family: 'Amarante', cursive;
 }
 p {
-  line-height: 2.8rem;
+  line-height: 2.4rem;
+  font-family: 'DM Sans', sans-serif;
 }
 img {
   display: block;
@@ -260,9 +271,16 @@ header a.turtle-logo-circle:hover img:nth-child(3) {
 }
 .intro-container p {
   max-width: 55ch;
+  width: 100%;
 }
-.intro-container small {
-  line-height: 24px;
+.intro-container p.author {
+  border-bottom: 1px white solid;
+  margin-block-start: 0;
+  padding-block-end: 24px;
+  text-align: right;
+}
+.intro-container p:last-of-type {
+  line-height: 124%;
 }
 .simon-and-the-crew-container {
   background-color: white;
