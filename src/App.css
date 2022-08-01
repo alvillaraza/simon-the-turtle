@@ -197,7 +197,8 @@ section.turtle-logo-container div.turtle-logo-circle {
 .simon-and-the-crew-container img.simon-schema {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  margin-top: 200px;
+  margin-top: 236px;
+  width: 116%;
 }
 .simon-and-the-crew-container img.simon-and-the-crew {
   border: 2.5vw white solid;
