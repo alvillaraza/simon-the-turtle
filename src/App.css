@@ -55,12 +55,21 @@ header {
   background-color: #00022a;
   display: grid;
   height: 100vh;
-  max-height: 768px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-header section.hero-image-bg,
-header section.hero-image-fg {
+@media screen and (max-width: 768px) {
+  header {
+    min-height: unset;
+    max-height: 620px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    min-height: 768px;
+  }
+}
+header section.hero-image-bg {
   align-items: end;
   display: flex;
   grid-column: 1 / -1;
@@ -69,8 +78,7 @@ header section.hero-image-fg {
   overflow: hidden;
   pointer-events: none;
 }
-header section.hero-image-bg img,
-header section.hero-image-fg img {
+header section.hero-image-bg img {
   min-width: 768px;
 }
 header section.hero-image-fg {
@@ -113,11 +121,10 @@ header section.hero-image-text h2 span {
     transform: translateY(-42.5vw);
   }
   header section.hero-image-text h1 {
-    font-size: 14vw;
+    font-size: 17.25vw;
   }
   header section.hero-image-text h2 {
-    font-size: 4vw;
-    transform: translateX(20px);
+    font-size: 5.25vw;
   }
   header section.hero-image-text h2 span {
     width: 9vw;
@@ -159,7 +166,7 @@ section.turtle-logo-container div.turtle-logo-circle {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: 15vw 7.5vw;
+  padding-block: 64px 7vw;
   padding-inline: 64px;
 }
 .intro-container p {
