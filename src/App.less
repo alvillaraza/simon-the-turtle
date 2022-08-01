@@ -60,10 +60,20 @@ header {
     background-color: #00022a;
     display: grid;
     height: 100vh;
+    // min-height: 960px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     position: relative;
     z-index: -1;
+
+    @media screen and (max-width: 768px) {
+        min-height: unset;
+        max-height: 620px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        min-height: 768px;
+    }
 
     section.hero-image-bg {
         align-items: end;
@@ -120,12 +130,11 @@ header {
             transform: translateY(-42vw);
 
             h1 {
-                font-size: 21vw;
+                font-size: 17.25vw;
             }
 
             h2 {
-                font-size: 6vw;
-                transform: translateX(30px);
+                font-size: 5.25vw;
 
                 span {
                     width: 10vw;
@@ -189,7 +198,7 @@ section.turtle-logo-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-block: 15vw 7.5vw;
+    padding-block: 64px 7vw;
     padding-inline: 64px;
 
     p {
