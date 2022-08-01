@@ -57,18 +57,21 @@ header {
   background-color: #00022a;
   display: grid;
   height: 100vh;
+  max-height: 620px;
+  min-height: 520px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   header {
-    min-height: unset;
-    max-height: 620px;
+    max-height: unset;
+    min-height: 620px;
   }
 }
 @media screen and (min-width: 1024px) {
   header {
-    min-height: 768px;
+    max-height: unset;
+    min-height: 920px;
   }
 }
 header section.hero-image-fg,
@@ -151,34 +154,22 @@ header section.hero-image-text-bg {
 }
 header section.hero-image-text-bg div.text-container h1,
 header section.hero-image-text-bg div.text-container h2 {
-  animation: throughSpaceAndTime 2.5s linear infinite both;
+  animation: throughSpaceAndTime 3.33s linear infinite both;
   background: linear-gradient(-45deg, #52eeba 0%, #23a6d5 33%, #8e23d5 66%, #e73c7e 100%);
   background-size: 400% 400%;
+  background-position: center;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
 header section.hero-image-text-bg div.text-container h1 {
-  transform: scale(1.05) skewY(-1deg);
+  transform: scale(1.075) skew(2.5deg, 1deg);
   transform-origin: center;
 }
 header section.hero-image-text-bg div.text-container h2 {
-  transform: translateX(20px) scale(1.025, 1.1) skewY(-1deg);
-  transform-origin: top center;
-}
-header section.hero-image-fg {
-  align-items: end;
-  display: flex;
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  justify-content: center;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
-}
-header section.hero-image-fg img {
-  min-width: 620px;
+  transform: translateX(20px) scale(1.025) skew(0deg, 2deg);
+  transform-origin: center center;
 }
 header section.turtle-logo-container {
   align-self: end;
@@ -191,8 +182,9 @@ header section.turtle-logo-container {
 }
 header a.turtle-logo-circle {
   align-items: center;
-  animation: throughSpaceAndTime 5s linear infinite both;
+  animation: throughSpaceAndTime 9.99s linear infinite both;
   background: linear-gradient(-45deg, #52eeba 0%, #23a6d5 33%, #8e23d5 66%, #e73c7e 100%);
+  background-position: center;
   background-size: 400% 400%;
   border-radius: 100%;
   border: 2px white solid;
@@ -207,7 +199,7 @@ header a.turtle-logo-circle {
   padding: 10px 25px;
   transform: scale(1);
   transition-property: transform;
-  transition-duration: 0.12s;
+  transition-duration: 0.36s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   width: 148px;
 }
@@ -234,18 +226,18 @@ header a.turtle-logo-circle img:nth-child(3) {
   transition-delay: 0.24s;
 }
 header a.turtle-logo-circle:hover {
-  transform: scale(1.25);
+  transform: scale(1.2);
 }
 header a.turtle-logo-circle:hover img:nth-child(1) {
-  transform: scale(1.05);
+  transform: scale(1);
 }
 header a.turtle-logo-circle:hover img:nth-child(2) {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1);
 }
 header a.turtle-logo-circle:hover img:nth-child(3) {
   opacity: 0;
-  transform: scale(2.1);
+  transform: scale(2);
 }
 @keyframes throughSpaceAndTime {
   0% {
