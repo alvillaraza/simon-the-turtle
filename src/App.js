@@ -1,10 +1,12 @@
 import Gallery from './Gallery';
 
+import heroImg_fg from './assets/hero_image.png';
+import heroImg_bg from './assets/hero_blur.png';
 import turtle_logo_white from './assets/turtle-camp-logo.png';
 import assembly_daytime from './assets/assembly_daytime.png';
 import assembly from './assets/assembly.png';
-import heroImg_fg from './assets/hero_image.png';
-import heroImg_bg from './assets/hero_blur.png';
+import turtleCamp_logo_color from './assets/TurtleCamp_FINALS-01.png';
+import footerImg_bg from './assets/footerbanner.JPG';
 
 import './brands.min.css';
 import './App.css';
@@ -83,6 +85,15 @@ function App() {
             </section>
 
             {/* <Gallery /> */}
+
+            <footer>
+                <img
+                    src={turtleCamp_logo_color}
+                    className="turtle-camp-logo"
+                    alt=""
+                />
+                <img src={footerImg_bg} className="footer-bg" alt="" />
+            </footer>
         </div>
     );
 }

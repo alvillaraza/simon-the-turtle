@@ -35,7 +35,7 @@ nav {
   top: 0;
 }
 nav i {
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   font-style: normal;
 }
 nav a {
@@ -168,7 +168,7 @@ section.turtle-logo-container div.turtle-logo-circle {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: 15vw;
+  padding-block: 15vw 7.5vw;
   padding-inline: 64px;
 }
 .intro-container p {
@@ -183,6 +183,7 @@ section.turtle-logo-container div.turtle-logo-circle {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   justify-items: center;
+  overflow: hidden;
 }
 .simon-and-the-crew-container .black-bevel {
   background-color: black;
@@ -196,7 +197,7 @@ section.turtle-logo-container div.turtle-logo-circle {
 .simon-and-the-crew-container img.simon-schema {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  margin-top: 208px;
+  margin-top: 200px;
 }
 .simon-and-the-crew-container img.simon-and-the-crew {
   border: 2.5vw white solid;
@@ -204,6 +205,23 @@ section.turtle-logo-container div.turtle-logo-circle {
   grid-row: 1 / -1;
   width: 75vw;
   max-width: 380px;
-  transform: translateY(-50px);
+  z-index: 1;
+}
+footer {
+  justify-items: center;
+  background-color: white;
+  display: grid;
+  align-items: end;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+footer img {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+}
+footer img.turtle-camp-logo {
+  align-self: start;
+  transform: translateY(20px);
+  width: 25vw;
   z-index: 1;
 }
