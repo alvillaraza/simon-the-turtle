@@ -6,6 +6,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +35,7 @@ nav {
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 1;
 
     i {
         font-size: 3.2rem;
@@ -51,7 +53,7 @@ nav {
         transition-timing-function: cubic-bezier(0.47, 0.46, 0, 2.47);
 
         &:hover {
-            transform: scale(1.2, 1.2);
+            transform: scale(1.2);
         }
     }
 }
@@ -60,11 +62,9 @@ header {
     background-color: #00022a;
     display: grid;
     height: 100vh;
-    // min-height: 960px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     position: relative;
-    z-index: -1;
 
     @media screen and (max-width: 768px) {
         min-height: unset;
@@ -156,6 +156,12 @@ header {
         }
     }
 
+    section.hero-image-text-bg {
+        div.text-container {
+            transform: scale(1.05);
+        }
+    }
+
     section.hero-image-fg {
         align-items: end;
         display: flex;
@@ -170,26 +176,93 @@ header {
             min-width: 620px;
         }
     }
-}
 
-section.turtle-logo-container {
-    align-items: center;
-    height: 0;
-    overflow: visible;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
+    section.turtle-logo-container {
+        align-self: end;
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        justify-self: center;
+        mix-blend-mode: hard-light;
+        padding: 48px;
+        z-index: 1;
+    }
 
-    div.turtle-logo-circle {
-        background-color: black;
-        height: 20vw;
-        min-height: 160px;
-        width: 20vw;
-        min-width: 160px;
+    a.turtle-logo-circle {
+        align-items: center;
+        animation: throughSpaceAndTime 10s linear infinite both;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
         border-radius: 100%;
+        border: 2px white solid;
+        background-color: #8b2ac6;
+        box-shadow: 0 0 6px 3px white;
         box-sizing: border-box;
-        padding: 24px 39px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: 148px;
+        justify-content: center;
+        padding: 10px 25px;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 0.32s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        width: 148px;
+
+        img {
+            grid-column: ~'1 / -1';
+            grid-row: ~'1 / -1';
+            opacity: 1;
+            transform: scale(0.9);
+            transition-duration: 0.32s;
+            transition-property: opacity, transform;
+            transition-timing-function: ease-in-out;
+
+            &:nth-child(1) {
+                mix-blend-mode: screen;
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                mix-blend-mode: soft-light;
+                transition-delay: 0.12s;
+            }
+
+            &:nth-child(3) {
+                mix-blend-mode: soft-light;
+                transition-delay: 0.32s;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.25);
+
+            img:nth-child(1) {
+                transform: scale(1.1);
+            }
+
+            img:nth-child(2) {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+
+            img:nth-child(3) {
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+
+        @keyframes throughSpaceAndTime {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
     }
 }
 
@@ -198,7 +271,7 @@ section.turtle-logo-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-block: 64px 7vw;
+    padding-block: 48px 7vw;
     padding-inline: 64px;
 
     p {
