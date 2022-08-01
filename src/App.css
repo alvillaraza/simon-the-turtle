@@ -55,12 +55,12 @@ header {
   background-color: #00022a;
   display: grid;
   height: 100vh;
+  max-height: 768px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  position: relative;
-  z-index: -1;
 }
-header section.hero-image-bg {
+header section.hero-image-bg,
+header section.hero-image-fg {
   align-items: end;
   display: flex;
   grid-column: 1 / -1;
@@ -69,8 +69,12 @@ header section.hero-image-bg {
   overflow: hidden;
   pointer-events: none;
 }
-header section.hero-image-bg img {
-  min-width: 620px;
+header section.hero-image-bg img,
+header section.hero-image-fg img {
+  min-width: 768px;
+}
+header section.hero-image-fg {
+  z-index: 1;
 }
 header section.hero-image-text {
   align-self: end;
@@ -79,7 +83,7 @@ header section.hero-image-text {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   justify-self: center;
-  transform: translateY(-266px);
+  transform: translateY(-330px);
 }
 header section.hero-image-text .text-container {
   align-items: center;
@@ -102,26 +106,11 @@ header section.hero-image-text h2 {
 }
 header section.hero-image-text h2 span {
   display: inline-block;
-  width: 60px;
+  width: 64px;
 }
-@media screen and (min-width: 621px) {
+@media screen and (min-width: 769px) {
   header section.hero-image-text {
-    transform: translateY(-42vw);
-  }
-  header section.hero-image-text h1 {
-    font-size: 21vw;
-  }
-  header section.hero-image-text h2 {
-    font-size: 6vw;
-    transform: translateX(30px);
-  }
-  header section.hero-image-text h2 span {
-    width: 10vw;
-  }
-}
-@media screen and (min-width: 960px) {
-  header section.hero-image-text {
-    transform: translateY(-43vw);
+    transform: translateY(-42.5vw);
   }
   header section.hero-image-text h1 {
     font-size: 14vw;
@@ -130,19 +119,21 @@ header section.hero-image-text h2 span {
     font-size: 4vw;
     transform: translateX(20px);
   }
+  header section.hero-image-text h2 span {
+    width: 9vw;
+  }
 }
-header section.hero-image-fg {
-  align-items: end;
-  display: flex;
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  justify-content: center;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
-}
-header section.hero-image-fg img {
-  min-width: 620px;
+@media screen and (min-width: 960px) {
+  header section.hero-image-text {
+    transform: translateY(-42.25vw);
+  }
+  header section.hero-image-text h1 {
+    font-size: 14vw;
+  }
+  header section.hero-image-text h2 {
+    font-size: 4vw;
+    transform: translateX(24px);
+  }
 }
 section.turtle-logo-container {
   align-items: center;

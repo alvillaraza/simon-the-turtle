@@ -60,12 +60,12 @@ header {
     background-color: #00022a;
     display: grid;
     height: 100vh;
+    max-height: 768px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    position: relative;
-    z-index: -1;
 
-    section.hero-image-bg {
+    section.hero-image-bg,
+    section.hero-image-fg {
         align-items: end;
         display: flex;
         grid-column: ~'1 / -1';
@@ -75,8 +75,12 @@ header {
         pointer-events: none;
 
         img {
-            min-width: 620px;
+            min-width: 768px;
         }
+    }
+
+    section.hero-image-fg {
+        z-index: 1;
     }
 
     section.hero-image-text {
@@ -86,7 +90,7 @@ header {
         grid-column: ~'1 / -1';
         grid-row: ~'1 / -1';
         justify-self: center;
-        transform: translateY(-266px);
+        transform: translateY(-330px);
 
         .text-container {
             align-items: center;
@@ -112,29 +116,12 @@ header {
 
             span {
                 display: inline-block;
-                width: 60px;
+                width: 64px;
             }
         }
 
-        @media screen and (min-width: 621px) {
-            transform: translateY(-42vw);
-
-            h1 {
-                font-size: 21vw;
-            }
-
-            h2 {
-                font-size: 6vw;
-                transform: translateX(30px);
-
-                span {
-                    width: 10vw;
-                }
-            }
-        }
-
-        @media screen and (min-width: 960px) {
-            transform: translateY(-43vw);
+        @media screen and (min-width: 769px) {
+            transform: translateY(-42.5vw);
 
             h1 {
                 font-size: 14vw;
@@ -143,22 +130,24 @@ header {
             h2 {
                 font-size: 4vw;
                 transform: translateX(20px);
+
+                span {
+                    width: 9vw;
+                }
             }
         }
-    }
 
-    section.hero-image-fg {
-        align-items: end;
-        display: flex;
-        grid-column: ~'1 / -1';
-        grid-row: ~'1 / -1';
-        justify-content: center;
-        overflow: hidden;
-        pointer-events: none;
-        z-index: 1;
+        @media screen and (min-width: 960px) {
+            transform: translateY(-42.25vw);
 
-        img {
-            min-width: 620px;
+            h1 {
+                font-size: 14vw;
+            }
+
+            h2 {
+                font-size: 4vw;
+                transform: translateX(24px);
+            }
         }
     }
 }
