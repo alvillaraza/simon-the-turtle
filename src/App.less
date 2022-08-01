@@ -160,8 +160,25 @@ header {
     }
 
     section.hero-image-text-bg {
+        mix-blend-mode: color-dodge;
+
         div.text-container {
             transform: scale(1.05);
+            transform-origin: center bottom;
+
+            h1,
+            h2 {
+                animation: throughSpaceAndTime 1s linear infinite both;
+                background: linear-gradient(
+                    -45deg,
+                    #ee7752,
+                    #e73c7e,
+                    #23a6d5,
+                    #23d5ab
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
     }
 
@@ -208,7 +225,7 @@ header {
         padding: 10px 25px;
         transform: scale(1);
         transition-property: transform;
-        transition-duration: 0.32s;
+        transition-duration: 0.12s;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         width: 148px;
 
@@ -219,7 +236,7 @@ header {
             transform: scale(0.9);
             transition-duration: 0.32s;
             transition-property: opacity, transform;
-            transition-timing-function: ease-in-out;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
             &:nth-child(1) {
                 mix-blend-mode: screen;
@@ -233,7 +250,8 @@ header {
 
             &:nth-child(3) {
                 mix-blend-mode: soft-light;
-                transition-delay: 0.32s;
+                transition-duration: 0.32s;
+                transition-delay: 0.24s;
             }
         }
 
@@ -241,31 +259,31 @@ header {
             transform: scale(1.25);
 
             img:nth-child(1) {
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
 
             img:nth-child(2) {
                 opacity: 1;
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
 
             img:nth-child(3) {
                 opacity: 0;
-                transform: scale(2);
+                transform: scale(2.1);
             }
         }
+    }
+}
 
-        @keyframes throughSpaceAndTime {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+@keyframes throughSpaceAndTime {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
