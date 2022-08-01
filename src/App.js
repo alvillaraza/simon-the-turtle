@@ -1,6 +1,6 @@
 import Gallery from './Gallery';
 
-import turtle_logo_white from './assets/turtle_logo_white.svg';
+import turtle_logo_white from './assets/turtle-camp-logo.png';
 import assembly_daytime from './assets/assembly_daytime.png';
 import assembly from './assets/assembly.png';
 import heroImg_fg from './assets/hero_image.png';
@@ -12,17 +12,17 @@ import './App.css';
 function App() {
     return (
         <div className="App">
-            <header>
-                <nav>
-                    <a
-                        href="https://www.instagram.com/simontheturtlecar/"
-                        title="Check us out on Instagram!"
-                        target="_blank"
-                    >
-                        <i className="fa-brands fa-instagram"></i>
-                    </a>
-                </nav>
+            <nav>
+                <a
+                    href="https://www.instagram.com/simontheturtlecar/"
+                    title="Check us out on Instagram!"
+                    target="_blank"
+                >
+                    <i className="fa-brands fa-instagram"></i>
+                </a>
+            </nav>
 
+            <header>
                 <section className="hero-image-bg">
                     <img src={heroImg_bg} alt="" />
                 </section>
@@ -41,12 +41,17 @@ function App() {
                 </section>
             </header>
 
-            {/* <img
-                src={turtle_logo_white}
-                className="logo-white"
-                alt="white simon the turtle logo"
-            /> */}
-            {/* <div className="copy">
+            <section className="turtle-logo-container">
+                <div className="turtle-logo-circle">
+                    <img
+                        src={turtle_logo_white}
+                        className="logo-white"
+                        alt="white simon the turtle logo"
+                    />
+                </div>
+            </section>
+
+            <section className="intro-container">
                 <p>
                     After building HeadSpace in 2016, I decided to build a
                     smaller, more portable vehicle to be able to transport it
@@ -55,21 +60,28 @@ function App() {
                     electric, remote-controlled turtle: SIMON the TURTLE.
                 </p>
                 <p>
-                    Two years later, we’ve refined the design so that it can
+                    Two years later, we've refined the design so that it can
                     completely disassemble into the bed of a pickup truck.
                 </p>
                 <p>
-                    SIMON the TURTLE is a Sensory Immersive Mobile Observation
-                    Nest the Transforming Universal Remote-controlled
-                    Load-bearing Electric vehicle.
+                    <small>
+                        SIMON the TURTLE is a Sensory Immersive Mobile
+                        Observation Nest the Transforming Universal
+                        Remote-controlled Load-bearing Electric vehicle.
+                    </small>
                 </p>
-            </div> */}
-            {/* <img
-                src={assembly_daytime}
-                className="assembly-daytime"
-                alt="daytime simon"
-            /> */}
-            {/* <img src={assembly} className="assembly" alt="assembly" /> */}
+            </section>
+
+            <section className="simon-and-the-crew-container">
+                <div className="black-bevel"></div>
+                <img src={assembly} className="simon-schema" alt="" />
+                <img
+                    src={assembly_daytime}
+                    className="simon-and-the-crew"
+                    alt=""
+                />
+            </section>
+
             {/* <Gallery /> */}
         </div>
     );

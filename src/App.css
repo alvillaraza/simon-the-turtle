@@ -8,39 +8,37 @@
 .headingFont {
   font-family: 'Amarante', cursive;
 }
+html {
+  font-size: 62.5%;
+}
 body {
-  background-color: #00022a;
+  background-color: black;
   color: white;
   font-family: 'Prata', serif;
   font-size: 1.6rem;
+  letter-spacing: 1px;
 }
 h1,
 h2 {
   font-family: 'Amarante', cursive;
 }
+p {
+  line-height: 2.8rem;
+}
 img {
   display: block;
   width: 100%;
 }
-header {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
 }
-header nav {
-  align-self: start;
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  justify-self: end;
-  overflow: hidden;
-  z-index: 2;
-}
-header nav i {
+nav i {
   font-size: 2.2rem;
   font-style: normal;
 }
-header nav a {
+nav a {
   color: white;
   display: block;
   padding: 24px;
@@ -50,8 +48,17 @@ header nav a {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.47, 0.46, 0, 2.47);
 }
-header nav a:hover {
+nav a:hover {
   transform: scale(1.2, 1.2);
+}
+header {
+  background-color: #00022a;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+  z-index: -1;
 }
 header section.hero-image-bg {
   align-items: end;
@@ -137,32 +144,66 @@ header section.hero-image-fg {
 header section.hero-image-fg img {
   min-width: 620px;
 }
-.logo-white {
-  position: absolute;
-  z-index: 2;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  margin-top: -13%;
+section.turtle-logo-container {
+  align-items: center;
+  height: 0;
+  overflow: visible;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
 }
-.copy {
-  margin: 148px 248px 284px 248px;
-  text-align: left;
-  line-height: 172%;
-  letter-spacing: 0.04em;
-  border-radius: 60%;
+section.turtle-logo-container div.turtle-logo-circle {
+  background-color: black;
+  height: 20vw;
+  min-height: 160px;
+  width: 20vw;
+  min-width: 160px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  padding: 24px 39px;
 }
-.assembly-daytime {
-  border: 20px solid #ffffff;
-  position: absolute;
-  z-index: 3;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  margin-top: -20%;
+.intro-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 15vw;
+  padding-inline: 64px;
 }
-.assembly {
-  width: 100%;
+.intro-container p {
+  max-width: 55ch;
+}
+.intro-container small {
+  line-height: 24px;
+}
+.simon-and-the-crew-container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+.simon-and-the-crew-container .black-bevel {
+  background-color: black;
+  border-radius: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  height: 200px;
+  transform: translateY(-50px);
+  width: 125%;
+}
+.simon-and-the-crew-container img.simon-schema {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  margin-top: 208px;
+}
+.simon-and-the-crew-container img.simon-and-the-crew {
+  border: 2.5vw white solid;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 75vw;
+  max-width: 380px;
+  transform: translateY(-50px);
+  z-index: 1;
 }
