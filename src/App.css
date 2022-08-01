@@ -71,6 +71,7 @@ header {
     min-height: 768px;
   }
 }
+header section.hero-image-fg,
 header section.hero-image-bg {
   align-items: end;
   display: flex;
@@ -80,6 +81,7 @@ header section.hero-image-bg {
   overflow: hidden;
   pointer-events: none;
 }
+header section.hero-image-fg img,
 header section.hero-image-bg img {
   min-width: 768px;
 }
@@ -145,18 +147,25 @@ header section.hero-image-text h2 span {
   }
 }
 header section.hero-image-text-bg {
-  mix-blend-mode: color-dodge;
-}
-header section.hero-image-text-bg div.text-container {
-  transform: scale(1.05);
-  transform-origin: center bottom;
+  mix-blend-mode: hard-light;
 }
 header section.hero-image-text-bg div.text-container h1,
 header section.hero-image-text-bg div.text-container h2 {
-  animation: throughSpaceAndTime 1s linear infinite both;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: throughSpaceAndTime 2.5s linear infinite both;
+  background: linear-gradient(-45deg, #52eeba 0%, #23a6d5 33%, #8e23d5 66%, #e73c7e 100%);
+  background-size: 400% 400%;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+header section.hero-image-text-bg div.text-container h1 {
+  transform: scale(1.05) skewY(-1deg);
+  transform-origin: center;
+}
+header section.hero-image-text-bg div.text-container h2 {
+  transform: translateX(20px) scale(1.025, 1.1) skewY(-1deg);
+  transform-origin: top center;
 }
 header section.hero-image-fg {
   align-items: end;
@@ -182,8 +191,8 @@ header section.turtle-logo-container {
 }
 header a.turtle-logo-circle {
   align-items: center;
-  animation: throughSpaceAndTime 10s linear infinite both;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: throughSpaceAndTime 5s linear infinite both;
+  background: linear-gradient(-45deg, #52eeba 0%, #23a6d5 33%, #8e23d5 66%, #e73c7e 100%);
   background-size: 400% 400%;
   border-radius: 100%;
   border: 2px white solid;

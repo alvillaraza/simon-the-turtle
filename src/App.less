@@ -74,6 +74,7 @@ header {
         min-height: 768px;
     }
 
+    section.hero-image-fg,
     section.hero-image-bg {
         align-items: end;
         display: flex;
@@ -160,24 +161,34 @@ header {
     }
 
     section.hero-image-text-bg {
-        mix-blend-mode: color-dodge;
+        mix-blend-mode: hard-light;
 
         div.text-container {
-            transform: scale(1.05);
-            transform-origin: center bottom;
-
             h1,
             h2 {
-                animation: throughSpaceAndTime 1s linear infinite both;
+                animation: throughSpaceAndTime 2.5s linear infinite both;
                 background: linear-gradient(
                     -45deg,
-                    #ee7752,
-                    #e73c7e,
-                    #23a6d5,
-                    #23d5ab
+                    rgba(82, 238, 186, 1) 0%,
+                    rgba(35, 166, 213, 1) 33%,
+                    rgba(142, 35, 213, 1) 66%,
+                    rgba(231, 60, 126, 1) 100%
                 );
+                background-size: 400% 400%;
                 -webkit-background-clip: text;
+                -moz-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                -moz-text-fill-color: transparent;
+            }
+
+            h1 {
+                transform: scale(1.05) skewY(-1deg);
+                transform-origin: center;
+            }
+
+            h2 {
+                transform: translateX(20px) scale(1.025, 1.1) skewY(-1deg);
+                transform-origin: top center;
             }
         }
     }
@@ -209,8 +220,14 @@ header {
 
     a.turtle-logo-circle {
         align-items: center;
-        animation: throughSpaceAndTime 10s linear infinite both;
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        animation: throughSpaceAndTime 5s linear infinite both;
+        background: linear-gradient(
+            -45deg,
+            rgba(82, 238, 186, 1) 0%,
+            rgba(35, 166, 213, 1) 33%,
+            rgba(142, 35, 213, 1) 66%,
+            rgba(231, 60, 126, 1) 100%
+        );
         background-size: 400% 400%;
         border-radius: 100%;
         border: 2px white solid;
