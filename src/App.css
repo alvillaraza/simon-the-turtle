@@ -34,7 +34,7 @@ nav {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: 99;
 }
 nav i {
   font-size: 3.2rem;
@@ -71,7 +71,7 @@ header {
 @media screen and (min-width: 1024px) {
   header {
     max-height: unset;
-    min-height: 920px;
+    min-height: 820px;
   }
 }
 header section.hero-image-fg,
@@ -154,7 +154,7 @@ header section.hero-image-text-bg {
 }
 header section.hero-image-text-bg div.text-container h1,
 header section.hero-image-text-bg div.text-container h2 {
-  animation: throughSpaceAndTime 3.33s linear infinite both;
+  animation: throughSpaceAndTime 5s linear infinite both;
   background: linear-gradient(-45deg, #52eeba 0%, #23a6d5 33%, #8e23d5 66%, #e73c7e 100%);
   background-size: 400% 400%;
   background-position: center;
@@ -164,11 +164,11 @@ header section.hero-image-text-bg div.text-container h2 {
   -moz-text-fill-color: transparent;
 }
 header section.hero-image-text-bg div.text-container h1 {
-  transform: scale(1.075) skew(2.5deg, 1deg);
+  transform: scale(1.05) skew(0deg, 1deg) translateX(-3px);
   transform-origin: center;
 }
 header section.hero-image-text-bg div.text-container h2 {
-  transform: translateX(20px) scale(1.025) skew(0deg, 2deg);
+  transform: translateX(23px) scale(1.025) skew(0deg, 1deg);
   transform-origin: center center;
 }
 header section.turtle-logo-container {
