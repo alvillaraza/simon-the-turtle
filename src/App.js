@@ -29,6 +29,15 @@ function App() {
                     <img src={heroImg_bg} alt="" />
                 </section>
 
+                <section className="hero-image-text hero-image-text-bg">
+                    <div className="text-container">
+                        <h1>SIMON</h1>
+                        <h2>
+                            THE<span></span>TURTLE
+                        </h2>
+                    </div>
+                </section>
+
                 <section className="hero-image-text">
                     <div className="text-container">
                         <h1>SIMON</h1>
@@ -41,19 +50,29 @@ function App() {
                 <section className="hero-image-fg">
                     <img src={heroImg_fg} className="hero-image-fg" alt="" />
                 </section>
+
+                <section className="turtle-logo-container">
+                    <a className="turtle-logo-circle" href="#about-simon">
+                        <img
+                            src={turtle_logo_white}
+                            className="logo-white"
+                            alt="Simon the Turtle Logo"
+                        />
+                        <img
+                            src={turtle_logo_white}
+                            className="logo-white"
+                            alt="Simon the Turtle Logo"
+                        />
+                        <img
+                            src={turtle_logo_white}
+                            className="logo-white"
+                            alt="Simon the Turtle Logo"
+                        />
+                    </a>
+                </section>
             </header>
 
-            <section className="turtle-logo-container">
-                <div className="turtle-logo-circle">
-                    <img
-                        src={turtle_logo_white}
-                        className="logo-white"
-                        alt="white simon the turtle logo"
-                    />
-                </div>
-            </section>
-
-            <section className="intro-container">
+            <section id="about-simon" className="intro-container">
                 <p>
                     After building HeadSpace in 2016, I decided to build a
                     smaller, more portable vehicle to be able to transport it
