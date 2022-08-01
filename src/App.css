@@ -63,7 +63,7 @@ header section.hero-image-bg {
   pointer-events: none;
 }
 header section.hero-image-bg img {
-  min-width: 768px;
+  min-width: 620px;
 }
 header section.hero-image-text {
   align-self: end;
@@ -72,8 +72,7 @@ header section.hero-image-text {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   justify-self: center;
-  overflow: hidden;
-  transform: translateY(-320px);
+  transform: translateY(-266px);
 }
 header section.hero-image-text .text-container {
   align-items: center;
@@ -86,19 +85,19 @@ header section.hero-image-text h2 {
   margin: 0;
 }
 header section.hero-image-text h1 {
-  font-size: 160px;
-  letter-spacing: -16px;
-  margin-bottom: -18px;
+  font-size: 108px;
+  letter-spacing: -10px;
+  margin-bottom: -10px;
 }
 header section.hero-image-text h2 {
-  font-size: 48px;
-  transform: translateX(32px);
+  font-size: 32px;
+  transform: translateX(20px);
 }
 header section.hero-image-text h2 span {
   display: inline-block;
-  width: 72px;
+  width: 60px;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 621px) {
   header section.hero-image-text {
     transform: translateY(-42vw);
   }
@@ -107,10 +106,22 @@ header section.hero-image-text h2 span {
   }
   header section.hero-image-text h2 {
     font-size: 6vw;
-    transform: translateX(3.75vw);
+    transform: translateX(30px);
   }
   header section.hero-image-text h2 span {
     width: 10vw;
+  }
+}
+@media screen and (min-width: 960px) {
+  header section.hero-image-text {
+    transform: translateY(-43vw);
+  }
+  header section.hero-image-text h1 {
+    font-size: 14vw;
+  }
+  header section.hero-image-text h2 {
+    font-size: 4vw;
+    transform: translateX(20px);
   }
 }
 header section.hero-image-fg {
@@ -124,7 +135,7 @@ header section.hero-image-fg {
   z-index: 1;
 }
 header section.hero-image-fg img {
-  min-width: 768px;
+  min-width: 620px;
 }
 .logo-white {
   position: absolute;

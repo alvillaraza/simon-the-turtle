@@ -5,7 +5,6 @@ import assembly_daytime from './assets/assembly_daytime.png';
 import assembly from './assets/assembly.png';
 import heroImg_fg from './assets/hero_image.png';
 import heroImg_bg from './assets/hero_blur.png';
-import heroImg_title from './assets/hero_copy.svg';
 
 import './brands.min.css';
 import './App.css';
