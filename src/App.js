@@ -33,7 +33,7 @@ function App() {
                     <div className="text-container">
                         <h1>SIMON</h1>
                         <h2>
-                            THE<span></span>TURTLE testing
+                            THE<span></span>TURTLE
                         </h2>
                     </div>
                 </section>
