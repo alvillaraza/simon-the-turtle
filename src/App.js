@@ -104,7 +104,7 @@ function App() {
                 />
             </section>
 
-            {/* <Gallery /> */}
+            <Gallery />
 
             <footer>
                 <img
