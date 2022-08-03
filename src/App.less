@@ -14,7 +14,6 @@ html {
 }
 
 body {
-    background-color: black;
     color: white;
     font-family: 'Prata', serif;
     font-size: 1.6rem;
@@ -306,6 +305,7 @@ header {
 }
 
 .intro-container {
+    background-color: black;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -356,7 +356,7 @@ header {
     }
 
     img.simon-and-the-crew {
-        border: 2.5vw white solid;
+        border: 12px white solid;
         grid-column: ~'1 / -1';
         grid-row: ~'1 / -1';
         width: 75vw;
@@ -366,10 +366,11 @@ header {
 }
 
 section.gallery-container {
-    background-color: white;
     display: grid;
     grid-template-columns: repeat(3, auto);
     padding: 12px 36px 48px;
+    max-width: 620px;
+    margin: auto;
 
     div {
         animation: throughSpaceAndTime 5s linear infinite both;
