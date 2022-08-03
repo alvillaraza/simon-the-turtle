@@ -77,10 +77,10 @@ header {
 @media screen and (min-width: 768px) {
   header {
     max-height: unset;
-    min-height: 620px;
+    min-height: 680px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 920px) {
   header {
     max-height: unset;
     min-height: 820px;
