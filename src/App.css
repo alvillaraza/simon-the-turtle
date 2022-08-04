@@ -92,7 +92,7 @@ header {
 }
 header section.hero-image-fg,
 header section.hero-image-bg {
-  align-items: end;
+  align-items: flex-end;
   display: flex;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
@@ -108,7 +108,7 @@ header section.hero-image-fg {
   z-index: 1;
 }
 header section.hero-image-text {
-  align-self: end;
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
   grid-column: 1 / -1;
@@ -188,7 +188,7 @@ header section.hero-image-text-bg div.text-container h2 {
   transform-origin: center center;
 }
 header section.turtle-logo-container {
-  align-self: end;
+  align-self: flex-end;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   justify-self: center;
@@ -380,9 +380,11 @@ footer {
   justify-items: center;
   background-color: white;
   display: grid;
-  align-items: end;
+  align-items: flex-end;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  height: 50vw;
+  min-height: 350px;
 }
 footer img {
   grid-row: 1 / -1;
@@ -390,7 +392,8 @@ footer img {
 }
 footer img.turtle-camp-logo {
   align-self: start;
+  margin-bottom: 12vw;
   transform: translateX(-12px);
-  width: 148px;
+  width: 124px;
   z-index: 1;
 }
