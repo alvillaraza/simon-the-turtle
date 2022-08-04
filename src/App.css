@@ -184,7 +184,7 @@ header section.hero-image-text-bg div.text-container h1 {
   transform-origin: center;
 }
 header section.hero-image-text-bg div.text-container h2 {
-  transform: translateX(20px) scale(1.025) skew(0deg, 0.5deg);
+  transform: translateX(20px) scale(1.035) skew(0deg, 0.5deg);
   transform-origin: center center;
 }
 header section.turtle-logo-container {
